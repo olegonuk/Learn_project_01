@@ -5,17 +5,17 @@ class Products {
 
       CATALOG.forEach(({ id, name, price, img }) => {
          htmlCatalog += `
-            <li>
-               <span>${name}</span>
-               <img src="${img}" alt="">
-               <span>${price}</span>
-               <button>Добавить в корзину</button>
+            <li class="products-element">
+               <span class="products-element__name">${name}</span>
+               <img class="products-element__img" src="${img}" alt="">
+               <span class="products-element__price">⚡️ ${price.toLocaleString()} USD</span>
+               <button class="products-element__btn">Добавить в корзину</button>
             </li>
          `;
       });
 
       const html = `
-         <ul>
+         <ul class="products-container">
             ${htmlCatalog};
          </ul>
       `;
