@@ -14,6 +14,7 @@ class Products {
          element.classList.remove(this.clasNameAcive);
          element.innerHTML = this.labelAdd;
       }
+      headerPage.render(products.length);
    }
 
    render() {
